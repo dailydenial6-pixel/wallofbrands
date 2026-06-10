@@ -1061,8 +1061,7 @@
 
     <div class="paypal-info">
       <div class="paypal-info-title">💙 Pay via PayPal</div>
-      <div class="paypal-info-email">dailydenial6@gmail.com</div>
-      <div class="paypal-info-note">Send as "Friends &amp; Family" · include your website URL in the note</div>
+      <div class="paypal-info-email">paypal.me/dwightclyborne</div>
     </div>
 
     <button class="modal-submit" onclick="submitPurchase()">💙 Pay via PayPal — Then Notify Us!</button>
@@ -1116,14 +1115,14 @@ const faqData = [
   {q:"Can I change my logo later?", a:"Yes — one free swap per year. After that, $1 per change."},
   {q:"What size/format should my logo be?", a:"Minimum 50×50px, square, transparent PNG preferred. We'll fit it into the grid perfectly."},
   {q:"Do you accept crypto?", a:"Yes — Bitcoin, Ethereum, USDC, and Solana. Email dailydenial6@gmail.com and we'll send a wallet address."},
-  {q:"How do I pay?", a:"PayPal to dailydenial6@gmail.com — send as Friends & Family and include your website URL in the note. Then email your logo to dailydenial6@gmail.com."},
+  {q:"How do I pay?", a:"PayPal to paypal.me/dwightclyborne — send as Friends & Family and include your website URL in the note. Then email your logo to dailydenial6@gmail.com."},
   {q:"How long until I go live?", a:"Within 24 hours of us receiving your payment and logo. Usually much faster."},
   {q:"What if my website URL changes?", a:"Email us. Free update, always."},
 ];
 
 const chatResponses = {
   price: "It's $4 per spot, one-time. No subscription. Bulk discounts: 5 = $18, 10 = $32, 50 = $140.",
-  how: "Pay $4 via PayPal to dailydenial6@gmail.com, then email your logo + URL to dailydenial6@gmail.com. You're live within 24 hours.",
+  how: "Pay $4 via PayPal to paypal.me/dwightclyborne, then email your logo + URL to dailydenial6@gmail.com. You're live within 24 hours.",
   permanent: "Yes — permanently. Static hosting + backups. If we shut down we release the files publicly so anyone can keep hosting it.",
   crypto: "Yes! Bitcoin, Ethereum, USDC, Solana. Email dailydenial6@gmail.com for a wallet address.",
   refund: "30-day money-back guarantee, no questions asked.",
@@ -1132,7 +1131,7 @@ const chatResponses = {
   spots: "4,000 total. 2 are taken so far. Grab yours!",
   bulk: "5 spots = $18, 10 = $32, 50 = $140, 100 = $260.",
   fame: "$10/week gets your brand featured at the top of the page + pinned on the grid + in the ticker. Email dailydenial6@gmail.com to book.",
-  paypal: "PayPal to dailydenial6@gmail.com — send as Friends & Family and add your website URL in the note.",
+  paypal: "PayPal to paypal.me/dwightclyborne — send as Friends & Family and add your website URL in the note.",
 };
 
 function init() {
@@ -1236,7 +1235,7 @@ function submitPurchase() {
   if (!name.trim()) { alert('Please enter your company name!'); return; }
   const amount = document.getElementById('spotCount').value;
   const paypalEmail = 'dailydenial6@gmail.com';
-  const paypalUrl = `https://www.paypal.com/paypalme/${paypalEmail.split('@')[0]}/${amount}`;
+  const paypalUrl = `paypal.me/dwightclyborne`;
   closeModal();
   setTimeout(() => {
     // Try to open PayPal
