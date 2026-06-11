@@ -463,9 +463,8 @@
 <div class="ticker-wrap">
   <div class="ticker-inner" id="tickerInner">
     ★ Wall of Fame — every follower gets their moment &nbsp;&nbsp;&nbsp;&nbsp;
-    📸 Follow on Instagram to appear on the wall &nbsp;&nbsp;&nbsp;&nbsp;
-    ★ Unlimited spots · free forever · no payments &nbsp;&nbsp;&nbsp;&nbsp;
-    🌟 5 Minutes of Fame — a random follower featured every 5 minutes &nbsp;&nbsp;&nbsp;&nbsp;
+    📸 Follow on Instagram to appear on the wall @turrizirani &nbsp;&nbsp;&nbsp;&nbsp;
+    🌟 5 Minutes of Fame — every 5 minutes one of you gets their spot randomly &nbsp;&nbsp;&nbsp;&nbsp;
     ★ Wall of Fame — every follower gets their moment &nbsp;&nbsp;&nbsp;&nbsp;
   </div>
 </div>
@@ -487,7 +486,7 @@
   <!-- Center: Title -->
   <div class="header-center">
     <h1 class="site-name">Wall of <em>Fame</em></h1>
-    <p class="site-tagline">Follow on Instagram → appear on the wall. Free. Always.</p>
+    <p class="site-tagline">Day 1 of adding each follower to the wall. Current count: 0 :(</p>
   </div>
 
   <!-- Right: duplicate fame (mirror) -->
@@ -582,15 +581,6 @@ const followers = [
   // { name: "Example User", handle: "example_user", img: "https://picsum.photos/seed/ex1/100/100" },
 ];
 
-// ===== FAQ DATA =====
-const faqData = [
-  { q: "How do I get on the Wall?", a: "Follow us on Instagram! Every new follower gets their profile picture added to the Wall of Fame automatically, along with a link to their Instagram profile. It's completely free." },
-  { q: "Is this really free?", a: "Yes, 100% free. There's no payment, no subscription, no premium tier. Just follow and you're on the wall forever." },
-  { q: "How does the 5 Minutes of Fame work?", a: "Every 5 minutes, a random follower is selected and featured prominently — in the header, in the news ticker, and in the dedicated section. Everyone gets a chance, purely by random draw." },
-  { q: "Can I update my profile picture?", a: "Your pic reflects your Instagram profile photo. When you update yours on Instagram, just let us know and we'll refresh it here." },
-  { q: "How many people can be on the wall?", a: "Unlimited! There's no cap. Every single follower gets a spot. The wall grows as our community grows." },
-  { q: "Can I remove myself?", a: "Yes. Just email us and we'll remove your profile pic within 24 hours." },
-];
 
 // ===== 5 MINUTES OF FAME ENGINE =====
 let fameIndex = 0;
@@ -706,28 +696,6 @@ function renderFollowers() {
   `).join('');
 }
 
-// ===== FAQ =====
-function buildFAQ() {
-  const list = document.getElementById('faqList');
-  list.innerHTML = faqData.map((item, i) => `
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(${i})">
-        <span>${item.q}</span>
-        <span class="faq-icon" id="faq-icon-${i}">+</span>
-      </div>
-      <div class="faq-a" id="faq-a-${i}">${item.a}</div>
-    </div>
-  `).join('');
-}
-
-function toggleFaq(i) {
-  const a = document.getElementById(`faq-a-${i}`);
-  const icon = document.getElementById(`faq-icon-${i}`);
-  const open = a.style.display === 'block';
-  a.style.display = open ? 'none' : 'block';
-  icon.textContent = open ? '+' : '✕';
-  icon.classList.toggle('open', !open);
-}
 
 // ===== INIT =====
 function init() {
